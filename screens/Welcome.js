@@ -9,6 +9,8 @@ export function Welcome({navigation}) {
                 <Image className="flex-1 justify-center mt-24" resizeMode="center" source={require('../assets/logo.png')}/>
                 <TouchableOpacity onPress={() => navigation.navigate('Login')} className="flex-2 items-center">
                     <Text className="font-bold text-base text-white bg-sky-800 rounded-xl text-center px-8 py-2.5 mb-10">Log in</Text>
+                </TouchableOpacity>
+                <TouchableOpacity onPress={() => navigation.navigate('Login')} className="flex-2 items-center">
                     <Text className="font-bold text-base text-sky-800 underline text-center mb-10">Sign up</Text>
                 </TouchableOpacity>
                 <Image className="flex-1 mt-0.5" source={require('../assets/water.png')}/>
@@ -16,3 +18,4 @@ export function Welcome({navigation}) {
         </View>
     );
 }
+
