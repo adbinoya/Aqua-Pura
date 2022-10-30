@@ -16,7 +16,7 @@ export function Welcome({navigation}) {
                         </View>
 
                     {/* Button Divs */}
-                        <View className="flex-col w-[30%] h-[40%] justify-center m-auto">
+                        <View className="flex-col w-[30%] justify-center m-auto">
                             <TouchableOpacity onPress={() => navigation.navigate('Login')}>
                                 <Text className="font-bold text-base text-white bg-sky-800 rounded-xl text-center px-8 py-2.5 mb-10">Log in</Text>
                             </TouchableOpacity>
@@ -24,11 +24,8 @@ export function Welcome({navigation}) {
                                 <Text className="font-bold text-base text-sky-800 underline text-center mb-10">Sign up</Text>
                             </TouchableOpacity>
                         </View>
+                        <Image className="self-center h-[30%]" resizeMode='stretch' source={require('../assets/water.png')}/>
 
-                    {/* Splash Image */}
-                        <View className="pt-[125%]">
-                            <Image className="self-center zIndex-1 w-[90%] h-[100%]" resizeMode='stretch' source={require('../assets/water.png')}/>
-                        </View>
 
                 </View>
 
