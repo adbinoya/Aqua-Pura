@@ -4,7 +4,7 @@ import { Text, View, Image, TouchableOpacity, SafeAreaView, ScrollView, TextInpu
 
 export function Signup({navigation}) {
     return (
-        <SafeAreaView style={{flex: 1, backgroundColor: '#d7f4ff'}}>
+        <View style={{flex: 1, paddingTop: Platform.OS === 'android' ? '10%' : 0, backgroundColor: '#E7F4FF'}}>
               <View className="flex-1 bg-[#d7f4ff] items-center justify-center">
                 <Text style = {{
                     color: '#015D82',
@@ -83,6 +83,6 @@ export function Signup({navigation}) {
                         </Text>
                 </TouchableOpacity>
             </View>
-        </SafeAreaView>
+        </View>
     );
 }
