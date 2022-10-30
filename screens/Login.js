@@ -3,8 +3,8 @@ import { Text, View, Image, TouchableOpacity, SafeAreaView, ScrollView, StatusBa
 
 export function Login({navigation}) {
         return (
-        <View style={{flex: 1, paddingTop: Platform.OS === 'android' ? '10%' : 0, backgroundColor: '#E7F4FF'}}>
-            <View className="flex-1 bg-[#d7f4ff] items-center justify-center">
+        <View style={{flex: 1, paddingTop: Platform.OS === 'android' ? '10%' : 0}}>
+            <View className="flex-1 bg-[#e7f4ff] items-center justify-center">
                 <Text style = {{ 
                     color: '#015D82',
                     fontSize: 36,

@@ -4,7 +4,7 @@ import { Text, View, Image, TouchableOpacity, StatusBar } from "react-native";
 
 export function Welcome({navigation}) {
     return (
-        <View style={{flex: 1, paddingTop: Platform.OS === 'android' ? '10%' : 0, backgroundColor: '#E7F4FF'}}>
+        <View style={{flex: 1, paddingTop: Platform.OS === 'android' ? '10%' : 0, backgroundColor: '#D7F4FF'}}>
             
 
             {/* Main Flex div */}

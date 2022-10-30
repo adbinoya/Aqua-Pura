@@ -4,6 +4,7 @@ import { StyleSheet, Text, View, Image, Button, SafeAreaView } from 'react-nativ
 import { Welcome } from './screens/Welcome';
 import { Login } from './screens/Login';
 import { Signup } from './screens/Signup';
+import { Authentication } from './screens/Authentication';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
@@ -15,6 +16,7 @@ export default function App() {
                 <Stack.Screen name='Welcome' component={Welcome}/>
                 <Stack.Screen name='Login' component={Login}/>
                 <Stack.Screen name='Signup' component={Signup}/>
+                <Stack.Screen name='Authentication' component={Authentication}/>
             </Stack.Navigator>
         </NavigationContainer>
     );
