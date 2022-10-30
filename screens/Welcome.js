@@ -24,7 +24,7 @@ export function Welcome({navigation}) {
                                 <Text className="font-bold text-base text-sky-800 underline text-center mb-10">Sign up</Text>
                             </TouchableOpacity>
                         </View>
-                        <Image className="self-center h-[30%]" resizeMode='stretch' source={require('../assets/water.png')}/>
+                        <Image className="flex-1 self-center h-[30%]" resizeMode='stretch' source={require('../assets/water.png')}/>
 
 
                 </View>
