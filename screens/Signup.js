@@ -6,7 +6,7 @@ export function Signup({navigation}) {
     return (
         <SafeAreaView style={{flex: 1, backgroundColor: '#d7f4ff'}}>
               <View className="flex-1 bg-[#d7f4ff] items-center justify-center">
-                <Text style = {{ 
+                <Text style = {{
                     color: '#015D82',
                     fontSize: 32,
                     fontWeight: 'bold',
@@ -17,8 +17,9 @@ export function Signup({navigation}) {
                 <View style = {{width: '80%'}}>
                 <TextInput 
                     placeholder = 'First Name'
+                    placeholderTextColor = '#778899'
                     style = {{
-                        backgroundColor: 'white',
+                        backgroundColor: '#f8f8ff',
                         borderRadius: 20,
                         paddingHorizontal: 15,
                         paddingVertical: 10,
@@ -27,8 +28,9 @@ export function Signup({navigation}) {
                 />
                 <TextInput 
                     placeholder = 'Last Name'
+                    placeholderTextColor = '#778899'
                     style = {{
-                        backgroundColor: 'white',
+                        backgroundColor: '#f8f8ff',
                         borderRadius: 20,
                         paddingHorizontal: 15,
                         paddingVertical: 10,
@@ -37,9 +39,10 @@ export function Signup({navigation}) {
                 />
                 <TextInput 
                     placeholder = 'Contact Number'
+                    placeholderTextColor = '#778899'
                     keyboardType = 'number-pad'
                     style = {{
-                        backgroundColor: 'white',
+                        backgroundColor: '#f8f8ff',
                         borderRadius: 20,
                         paddingHorizontal: 15,
                         paddingVertical: 10,
@@ -48,8 +51,9 @@ export function Signup({navigation}) {
                 />
                 <TextInput 
                     placeholder = 'Email'
+                    placeholderTextColor = '#778899'
                     style = {{
-                        backgroundColor: 'white',
+                        backgroundColor: '#f8f8ff',
                         borderRadius: 20,
                         paddingHorizontal: 15,
                         paddingVertical: 10,
@@ -58,9 +62,10 @@ export function Signup({navigation}) {
                 />
                 <TextInput 
                     placeholder = 'Password'
+                    placeholderTextColor = '#778899'
                     secureTextEntry
                     style = {{
-                        backgroundColor: 'white',
+                        backgroundColor: '#f8f8ff',
                         borderRadius: 20,
                         paddingHorizontal: 15,
                         paddingVertical: 10,
@@ -72,7 +77,7 @@ export function Signup({navigation}) {
                     onPress={() => navigation.navigate('Home')} 
                     className="flex-2 items-center">
                         <Text 
-                        className = " font-bold text-base text-white bg-sky-800 rounded-xl text-center px-8 py-2.5 mb-10"
+                        className = " font-bold text-base text-sky-100 bg-sky-800 rounded-xl text-center px-8 py-2.5 mb-10 "
                         style = {{marginTop: 50}}>
                             Submit
                         </Text>
