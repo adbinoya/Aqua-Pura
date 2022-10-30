@@ -4,17 +4,36 @@ import { Text, View, Image, TouchableOpacity, StatusBar } from "react-native";
 
 export function Welcome({navigation}) {
     return (
-        <View className="w-full h-full">
-            <View className="flex-1 bg-[#d7f4ff] items-center justify-center">
-                <Image className="flex-1 justify-center mt-24" resizeMode="center" source={require('../assets/logo.png')}/>
-                <TouchableOpacity onPress={() => navigation.navigate('Login')} className="flex-2 items-center">
-                    <Text className="font-bold text-base text-white bg-sky-800 rounded-xl text-center px-8 py-2.5 mb-10">Log in</Text>
-                </TouchableOpacity>
-                <TouchableOpacity onPress={() => navigation.navigate('Signup')} className="flex-2 items-center">
-                    <Text className="font-bold text-base text-sky-800 underline text-center mb-10">Sign up</Text>
-                </TouchableOpacity>
-                <Image className="flex-1 mt-0.5" source={require('../assets/water.png')}/>
-            </View>
+        <View style={{flex: 1, paddingTop: Platform.OS === 'android' ? '10%' : 0, backgroundColor: '#E7F4FF'}}>
+            
+
+            {/* Main Flex div */}
+                <View className="flex-1 flex-col justify-between space-y-5">
+
+                    {/* Logo Divs */}
+                        <View className="flex-col justify-center">
+                            <Image className="self-center w-[85%] h-[50%]" resizeMode='stretch' source={require('../assets/logo.png')}/>
+                        </View>
+
+                    {/* Button Divs */}
+                        <View className="flex-col w-[30%] h-[40%] justify-center m-auto">
+                            <TouchableOpacity onPress={() => navigation.navigate('Login')}>
+                                <Text className="font-bold text-base text-white bg-sky-800 rounded-xl text-center px-8 py-2.5 mb-10">Log in</Text>
+                            </TouchableOpacity>
+                            <TouchableOpacity onPress={() => navigation.navigate('Signup')} >
+                                <Text className="font-bold text-base text-sky-800 underline text-center mb-10">Sign up</Text>
+                            </TouchableOpacity>
+                        </View>
+
+                    {/* Splash Image */}
+                        <View className="pt-[125%]">
+                            <Image className="self-center zIndex-1 w-[90%] h-[100%]" resizeMode='stretch' source={require('../assets/water.png')}/>
+                        </View>
+
+                </View>
+
+
+                
         </View>
     );
 }
