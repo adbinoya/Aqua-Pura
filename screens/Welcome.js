@@ -4,11 +4,11 @@ import { Text, View, Image, TouchableOpacity, StatusBar } from "react-native";
 
 export function Welcome({navigation}) {
     return (
-        <View style={{flex: 1, paddingTop: Platform.OS === 'android' ? '10%' : 0, backgroundColor: '#D7F4FF'}}>
+        <View style={{flex: 1, paddingTop: Platform.OS === 'android' ? '10%' : 0}}>
             
 
             {/* Main Flex div */}
-                <View className="flex-1 flex-col justify-between space-y-5">
+                <View className="flex-1 flex-col justify-between space-y-5 bg-[#e7f4ff]">
 
                     {/* Logo Divs */}
                         <View className="flex-col justify-center">
@@ -24,7 +24,7 @@ export function Welcome({navigation}) {
                                 <Text className="font-bold text-base text-sky-800 underline text-center mb-10">Sign up</Text>
                             </TouchableOpacity>
                         </View>
-                        <Image className="self-center h-[30%]" resizeMode='stretch' source={require('../assets/water.png')}/>
+                        <Image className="flex-1 self-center h-[30%]" resizeMode='stretch' source={require('../assets/water.png')}/>
 
 
                 </View>

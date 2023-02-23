@@ -33,7 +33,6 @@ export function Login({navigation}) {
                 />
                 <TextInput 
                     placeholder = 'Password'
-                    secureTextEntry
                     style = {{
                         backgroundColor: 'white',
                         borderRadius: 20,
@@ -55,4 +54,4 @@ export function Login({navigation}) {
             </View>
         </View>
     );
-}
+};
