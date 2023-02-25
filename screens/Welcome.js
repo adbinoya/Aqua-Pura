@@ -1,4 +1,3 @@
-import { TextInput } from '@react-native-material/core';
 import React from 'react';
 import { Text, View, Image, TouchableOpacity, StatusBar } from "react-native";
 

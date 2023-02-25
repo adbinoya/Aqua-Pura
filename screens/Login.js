@@ -48,7 +48,7 @@ export function Login({navigation}) {
                     marginTop: 10
                 }}>Forgot Password?</Text>
                 </View>
-                <TouchableOpacity onPress={() => navigation.navigate('Home')} className="flex-2 items-center">
+                <TouchableOpacity onPress={() => navigation.navigate('MainScreen')} className="flex-2 items-center">
                     <Text className="font-bold text-base text-white bg-sky-800 rounded-xl text-center px-8 py-2.5 mb-10">Log in</Text>
                 </TouchableOpacity>
             </View>
