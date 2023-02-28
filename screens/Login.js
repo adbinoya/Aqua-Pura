@@ -56,6 +56,9 @@ export function Login({navigation}) {
                     }}>
                     Welcome back
                 </Text>
+                <Text>
+                    TEST
+                </Text>
                 <Text style = {{
                     color: '#0477A7',
                     fontSize: 14,
