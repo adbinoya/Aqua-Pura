@@ -123,6 +123,17 @@ export function Signup({navigation}) {
                             onChangeText ={emailHandler}
                         />
                         <TextInput 
+                            placeholder = 'Address'
+                            style = {{
+                                backgroundColor: 'white',
+                                borderRadius: 20,
+                                paddingHorizontal: 15,
+                                paddingVertical: 10,
+                                marginTop: 10
+                            }}
+                            onChangeText ={emailHandler}
+                        />
+                        <TextInput 
                             placeholder = 'Password'
                             secureTextEntry
                             style = {{
