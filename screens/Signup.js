@@ -9,8 +9,9 @@ export function Signup({navigation}) {
     const [lastName, setLastName] = useState("");
     const [phoneNumber, setPhoneNumber] = useState("");
     const [email, setEmail] = useState("");
+    const [address, setAddress] = useState("");
     const [password, setPassword] = useState("");
-
+    const [c_pass, setCPass] = useState("");
     const [isLoading, setIsLoading] = useState(false);
 
     const firstNameHandler = (fname) => {
@@ -25,12 +26,18 @@ export function Signup({navigation}) {
     const emailHandler = (email) => {
         setEmail(email);
     }
+    const addressHandler = (address) => {
+        setAddress(address);
+    }
     const passwordHandler = (password) => {
         setPassword(password);
     }
+    const confirmPassHandler = (c_pass) => {
+        setCPass(c_pass);
+    }
 
     //URL
-    const baseUrl = "http://192.168.1.59:8000";
+    const baseUrl = "https://aquapurawebsite.com/mobile/register.php";
 
     const Signup = async (event) => {
         // if (!firstName.trim() || !email.trim() || !firstName.trim() || !email.trim()) {
@@ -39,24 +46,23 @@ export function Signup({navigation}) {
         // }
         setIsLoading(true);
         try {
-          const response = await axios.post(`${baseUrl}/api/v1/register`, {
+          const response = await axios.post(`${baseUrl}`, {
             first_name: firstName,
             last_name: lastName,
             email: email,
             contact: phoneNumber,
+            address: address,
             password: password,
+            c_pass: c_pass,
          });
-          if (response.status === 200) {
+          if (response.data == 'register') {
             alert(`You are registered!`);
             navigation.navigate('Login')
-            setFirstName('');
-            setLastName('');
-            setPhoneNumber('');
-            setEmail('');
-            setPassword('');
             setIsLoading(false);
-          } else {
-            throw new Error("An error has occurred");
+          } else if(response.data == 'error email') {
+            alert(`Email is used`);
+          } else if (response.data == 'error password') {
+            alert(`password not match`);
           }
         } catch (error) {
           alert(error);
@@ -131,7 +137,7 @@ export function Signup({navigation}) {
                                 paddingVertical: 10,
                                 marginTop: 10
                             }}
-                            onChangeText ={emailHandler}
+                            onChangeText ={addressHandler}
                         />
                         <TextInput 
                             placeholder = 'Password'
@@ -155,6 +161,7 @@ export function Signup({navigation}) {
                                 paddingVertical: 10,
                                 marginTop: 10
                             }}
+                            onChangeText ={confirmPassHandler}
                         />
                         </View> 
                             <TouchableOpacity 
