@@ -15,7 +15,7 @@ export function Login({navigation}) {
     }
 
     //URL
-    const baseUrl = "http://192.168.1.59:8000";
+    const baseUrl = "https://aquapurawebsite.com/mobile/login.php";
 
     const Login = async (event) => {
         if (!email.trim()) {
@@ -28,16 +28,17 @@ export function Login({navigation}) {
         }
         setIsLoading(true);
         try {
-          const response = await axios.post(`${baseUrl}/api/v1/login`, {
+          const response = await axios.post(`${baseUrl}`, {
             email: email,
             password: password,
          });
-          if (response.status === 200) {
+         
+          if (response.data == 'Login') {
             alert(`You are Login!`);
             navigation.navigate('MainScreen')
             setIsLoading(false);
           } else {
-            throw new Error("An error has occurred");
+            alert(`These credentials do not match our records.`);
           }
         } catch (error) {
           alert(error);
@@ -55,9 +56,6 @@ export function Login({navigation}) {
                     letterSpacing: 2
                     }}>
                     Welcome back
-                </Text>
-                <Text>
-                    TEST
                 </Text>
                 <Text style = {{
                     color: '#0477A7',
