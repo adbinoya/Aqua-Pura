@@ -1,4 +1,5 @@
 import React from 'react';
+import 'expo-dev-client';
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, Image, Button, SafeAreaView } from 'react-native';
 import { Welcome } from './screens/Welcome';
