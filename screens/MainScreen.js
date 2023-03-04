@@ -10,7 +10,7 @@ import {MessagingScreen} from './MessagingScreen';
 import {OrderScreen} from './OrderScreen';
 import {ScanScreen} from './ScanScreen';
 import {SettingsScreen} from './SettingsScreen';
-import { color } from 'react-native-elements/dist/helpers';
+
 
 const Tab = createMaterialBottomTabNavigator();
 
@@ -26,7 +26,7 @@ export function MainScreen({navigation}) {
                         component={ProfileScreen}
                         options={{
                         tabBarLabel: 'Profile',
-                        tabBarIcon: ({ color }) => (
+                        tabBarIcon: ({  }) => (
                         <Ionicons name="ios-person" color={'#015D82'} size={20}/>
                         ),
                         //tabBarColor: 'white'
@@ -36,7 +36,7 @@ export function MainScreen({navigation}) {
                         component={MessagingScreen}
                         options={{
                         tabBarLabel: 'Message',
-                        tabBarIcon: ({ color }) => (
+                        tabBarIcon: ({  }) => (
                         <Ionicons name="ios-chatbubble-ellipses-sharp" color={'#015D82'} size={20}/>
                         ),
                         //tabBarColor: '#fff'
@@ -46,7 +46,7 @@ export function MainScreen({navigation}) {
                         component={OrderScreen}
                         options={{
                         tabBarLabel: 'Order',
-                        tabBarIcon: ({ color }) => (
+                        tabBarIcon: ({  }) => (
                         <Ionicons name="ios-duplicate" color={'#015D82'} size={20}/>
                         ),
                         //tabBarColor: '#fff'
@@ -56,7 +56,7 @@ export function MainScreen({navigation}) {
                         component={ScanScreen}
                         options={{
                         tabBarLabel: 'Scan',
-                        tabBarIcon: ({ color }) => (
+                        tabBarIcon: ({  }) => (
                         <Ionicons name="scan-sharp" color={'#015D82'} size={20}/>
                         ),
                         //tabBarColor: '#fff'
@@ -66,7 +66,7 @@ export function MainScreen({navigation}) {
                         component={SettingsScreen}
                         options={{
                         tabBarLabel: 'Settings',
-                        tabBarIcon: ({ color }) => (
+                        tabBarIcon: ({  }) => (
                         <Ionicons name="settings" color={'#015D82'} size={20}/>
                         ),
                         //tabBarColor: '#fff'
